@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Book list styles */
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .book-item {
+    width: calc(25% - 20px); /* Adjust based on the number of items per row */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-item h2 {
+    margin-top: 0;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .book-item {
+      width: calc(33.33% - 20px); /* Adjust based on the number of items per row */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .book-item {
+      width: calc(50% - 20px); /* Adjust based on the number of items per row */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .book-item {
+      width: 100%;
+    }
+  }
+  

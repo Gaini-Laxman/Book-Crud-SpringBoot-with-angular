@@ -1,0 +1,19 @@
+.container {
+    padding: 0px;
+  }
+  
+  header, footer {
+    background-color: red;
+    color: white;
+    padding: 5px; /* Add padding to create space */
+    text-align: center;
+  }
+  
+  header {
+    border-bottom: 50px solid white; /* Add border to create space */
+  }
+  
+  footer {
+    border-top: 50px solid white; /* Add border to create space */
+  }
+  

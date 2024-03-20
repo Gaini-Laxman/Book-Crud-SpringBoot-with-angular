@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin("http://localhost:4200/books-list")
 @RestController
 @RequestMapping("/api/")
 public class BookRestController {
@@ -34,7 +35,7 @@ public class BookRestController {
         }
     }
 
-    @PostMapping("/book")
+    @PostMapping("/books")
     public ResponseEntity<?> saveBook(@RequestBody Book book) {
         try {
             Book savedBook = bookRepo.save(book);
@@ -58,8 +59,8 @@ public class BookRestController {
     }
 
     static class UpdatedResponse {
-        private Book book;
-        private String message;
+        private final Book book;
+        private final String message;
 
         public UpdatedResponse(Book book, String message) {
             this.book = book;

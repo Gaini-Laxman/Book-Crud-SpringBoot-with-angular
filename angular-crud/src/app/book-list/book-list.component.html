@@ -1,0 +1,22 @@
+<div class="container">
+  <header>
+    <h1>Book List</h1>
+    <button class="btn btn-primary" (click)="navigateToAddBook()">Add Book</button><br> <!-- Button to add book -->
+  </header><br>
+  
+<div class="book-list">
+  <div class="book-item" *ngFor="let book of books">
+    <h2>{{ book.bookName }}</h2>
+    <p><strong>Price:</strong> {{ book.price !== null ? '₹' + (book.price * 1 | number:'1.2-2') : 'Price not available' }}</p>
+  </div>
+  
+</div>
+
+<ng-template #noBooks>
+  <p>No books available.</p>
+</ng-template>
+
+<footer>
+  <p>&copy; 2024 Java Fullstack Guru</p>
+</footer>
+</div>

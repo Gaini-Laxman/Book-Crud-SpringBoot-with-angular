@@ -1,0 +1,27 @@
+<div class="container">
+    <header>
+      <h1>Add Book</h1>
+    </header>
+  
+    <form (submit)="addBook()" class="add-book-form">
+      <div class="form-group">
+        <label for="bookName">Book Name:</label>
+        <input type="text" id="bookName" [(ngModel)]="book.bookName" name="bookName" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" [(ngModel)]="book.price" name="price" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Book</button><br>
+      <button class="btn btn-primary" (click)="viewBookList()">View Book List</button> <!-- Button to view book list -->
+    </form>
+  
+    <div *ngIf="successMessage" class="alert alert-success mt-3">
+      {{ successMessage }}
+    </div>
+  
+    <footer>
+      <p>&copy; 2024 Java Fullstack Guru</p>
+    </footer>
+  </div>
+  
