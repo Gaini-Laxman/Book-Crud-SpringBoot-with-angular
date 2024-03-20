@@ -1,0 +1,8 @@
+<div *ngFor="let book of books">
+    <h2>{{ book.title }}</h2>
+    <p>Author: {{ book.author }}</p>
+    <p>Price: {{ book.price }}</p>
+    <!-- Add delete book link -->
+    <a routerLink="/delete-book">Delete Book</a>
+  </div>
+  
